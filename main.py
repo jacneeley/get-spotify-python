@@ -31,6 +31,7 @@ def album_search(token, album_id):
             "Album Picture Url":str(json_result['images'][1]['url'])}
 
 album_data = []
+print("Creating CSV...")
 for album,artist in zip(albums, artists):
     album=spotify_search(token,album,artist)
     album_data.append(album_search(token,album))
@@ -41,4 +42,5 @@ for album,artist in zip(albums, artists):
 if len(top_albums) > 3:
     export_csv = top_albums.to_csv(r'top-albums.csv',index=None,header = True)
 else:
-    export_csv = top_albums.to_csv(r'top-adds.csv',index=None,header = True)    
+    export_csv = top_albums.to_csv(r'top-adds.csv',index=None,header = True)
+print("Done.")  
