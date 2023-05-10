@@ -11,11 +11,11 @@ token = get_token()
 def spotify_search(token,album_name,artist_name):
     url = "https://api.spotify.com/v1/search"
     headers = get_auth_header(token)
-    query = f"?q={album_name,artist_name}&type=album,artist&limit=1&market=ES"
+    query = f"?q={album_name,artist_name}&type=album,artist&market=ES&limit=1"
 
     q_url = url + query
     result = get(q_url,headers=headers)
-    json_result = json.loads(result.content)["albums"]["items"]
+    json_result = json.loads(result.content)['albums']['items']
     if len(json_result) == 0:
         print("No albums found...")
         return None
@@ -37,6 +37,10 @@ for album,artist in zip(albums, artists):
     album_data.append(album_search(token,album))
     print(str(album_search(token,album)) + ' added...')
     top_albums = pd.DataFrame(album_data)
+
+#change column positions.
+new_cols = ['Artist','Album','Album Picture Url']
+top_albums = top_albums.reindex(columns=new_cols)
 
 #export 
 if len(top_albums) > 3:
