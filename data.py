@@ -2,18 +2,20 @@ import pandas as pd
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-path = os.getenv("PATH")
+# load_dotenv()
+# path = os.getenv("PATH")
+path = 'C:/Users/jcn73/Documents/python-scripts/NACC_VIEW_CHARTS_EXPORT_20230501.csv'
 df = pd.read_csv(path)
 
 artists = []
 albums = []
 
 for i in df['Record']:
-    artists.append(i)
+    albums.append(i)
 
 for i in df['Artist']:
-    albums.append(i.lower())
+    artists.append(i.lower())
+
 
     
     
