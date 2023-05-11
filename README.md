@@ -1,4 +1,4 @@
-# Album Cover Search CLI
+# Album Cover Search Script
 
 ## Purpose:
 To make the process of collecting Album Cover images for our blog's top 30 less tedious<br>
