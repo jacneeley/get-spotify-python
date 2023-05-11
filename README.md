@@ -23,4 +23,4 @@ Several python libraries are used.<br>
  - Requests
  - Load_dotenv are needed.
 
-create a .env file
+.env must be created to hold the CLIENT_ID, the CLIENT_SECRET, and optionally, a FILE_PATH for NACC Chart CSVs.
