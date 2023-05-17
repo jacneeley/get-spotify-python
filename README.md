@@ -18,7 +18,7 @@ Efforts will be made to improve the accuracy of searches.<br>
 Searches are conducted to retrieve Album ID's. As of now this is the best way to return needed data.<br>
 
 ## Dependencies
-Several python libraries are used.<br>
+3 python libraries are used.<br>
  - Pandas 
  - Requests
  - Load_dotenv
