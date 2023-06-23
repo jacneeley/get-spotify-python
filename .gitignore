@@ -161,3 +161,6 @@ cython_debug/
 
 #CSV's
 *.csv
+
+#Folders
+top-adds-imgs/
