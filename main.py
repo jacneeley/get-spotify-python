@@ -48,7 +48,7 @@ new_cols = ['Artist','Album','Album Picture Url']
 top_albums = top_albums.reindex(columns=new_cols)
 
 #export 
-if len(top_albums) > 3:
+if len(top_albums) > 5:
     export_csv = top_albums.to_csv(r'top-albums.csv',index=None,header = True)
 else:
     export_csv = top_albums.to_csv(r'top-adds.csv',index=None,header = True)
