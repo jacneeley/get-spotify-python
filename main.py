@@ -17,7 +17,7 @@ def spotify_search(token,album_name,artist_name):
     result = get(q_url,headers=headers)
     json_result = json.loads(result.content)['albums']['items']
     if len(json_result) == 0:
-        print("No albums found...")
+        print("No album(s) found...")
         return None
     return json_result[0]["id"]
 
@@ -30,12 +30,17 @@ def album_search(token, album_id):
             "Artist":str(json_result['artists'][0]['name']),
             "Album Picture Url":str(json_result['images'][1]['url'])}
 
+
 album_data = []
 print("Creating CSV...")
 for album,artist in zip(albums, artists):
     album=spotify_search(token,album,artist)
-    album_data.append(album_search(token,album))
-    print(str(album_search(token,album)) + ' added...')
+    if album == None:
+        album_data.append({"Album":"No Album Found","Artist":"None","Album Picture Url":"None"})
+        print("No Album Found...")
+    else:
+        album_data.append(album_search(token,album))
+        print(str(album_search(token,album)) + ' added...')
     top_albums = pd.DataFrame(album_data)
 
 #change column positions.
