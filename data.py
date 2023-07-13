@@ -11,11 +11,9 @@ if(path == None):
     path.replace("\\","/")
 
 df = pd.read_csv(path)
-
+df.rename(columns={'Record' : 'Album'}, inplace=True)
 artists = []
 albums = []
-
-df.rename({'Record': 'Album'}, axis='index', inplace=True)
 
 for i in df['Album']:
     i = i.strip('\"')
@@ -23,11 +21,3 @@ for i in df['Album']:
 
 for i in df['Artist']:
     artists.append(i.lower())
-
-
-    
-    
-    
-        
-
-
