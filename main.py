@@ -55,5 +55,5 @@ else:
     export_csv = top_albums.to_csv(r'top-adds.csv',index=None,header = True)
 
 print("Downloading Images...")
-download_imgs(top_albums,'Album Picture Url')
+download_imgs(top_albums)
 print("Done.")  
