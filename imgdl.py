@@ -1,9 +1,14 @@
 import os
 import requests
-import shutil
-import pandas
-folder_path = 'C:/Users/Owner/Documents/Python-Scripts/get-spotify-python/top-30-imgs/'
+parent_dir = 'C:/Users/neele/python_projects/get-spotify-python/'
+directory = 'top-30-imgs/'
+folder_path = os.path.join(parent_dir, directory)
 def download_imgs(dataframe , column):
+    if os.path.exists(folder_path) == False:
+        os.mkdir(folder_path)
+        print("Directory '% s' created" % directory)
+    else: 
+        print("'% s' exists" % directory)
     count = 0
     urls = []
     for i in dataframe[column]:
@@ -20,6 +25,3 @@ def download_imgs(dataframe , column):
                     break
                 handle.write(img)
                 print("downloaded...")
-                
-            # data.raw_decode_content = True
-            # shutil.copyfileobj(data.raw,file)
