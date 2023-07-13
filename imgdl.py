@@ -1,8 +1,8 @@
 import os
 import requests
-parent_dir = 'C:/Users/neele/python_projects/get-spotify-python/'
-directory = 'top-30-imgs/'
-folder_path = os.path.join(parent_dir, directory)
+parent_dir = os.path.dirname(__file__).replace("\\","/")
+directory = '/top-30-imgs/'
+folder_path = parent_dir + directory
 def download_imgs(dataframe , column):
     if os.path.exists(folder_path) == False:
         os.mkdir(folder_path)
