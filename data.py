@@ -15,7 +15,10 @@ df = pd.read_csv(path)
 artists = []
 albums = []
 
-for i in df['Record']:
+df.rename({'Record': 'Album'}, axis='index', inplace=True)
+
+for i in df['Album']:
+    i = i.strip('\"')
     albums.append(i)
 
 for i in df['Artist']:
