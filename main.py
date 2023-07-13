@@ -4,6 +4,7 @@ import json
 import pandas as pd
 from auth import get_token,get_auth_header
 from data import albums, artists
+from imgdl import download_imgs
 
 token = get_token()
 
@@ -52,4 +53,7 @@ if len(top_albums) > 5:
     export_csv = top_albums.to_csv(r'top-30-albums.csv',index=None,header = True)
 else:
     export_csv = top_albums.to_csv(r'top-adds.csv',index=None,header = True)
+
+print("Downloading Images...")
+download_imgs(top_albums,'Album Picture Url')
 print("Done.")  
