@@ -49,7 +49,7 @@ Searches are conducted to retrieve Album ID's. As of now this is the best way to
  ### Obtaining Client ID and Client Secret
 
  Client Id and Secret can be obtained from the spotify webapi dashboard.<br>
- 1. Sign into the [dash board](https://developer.spotify.com/dashboard) using ktsw's spotify credentials.
+ 1. Sign into the [dash board](https://developer.spotify.com/dashboard) using spotify credentials.
  2. Click on "Python app" then click on "settings".
  3. Copy the client ID, create a `CLIENT_ID` key and paste the key as the value.
  4. Now go back and click "view client secret" repeat step 3 for `CLIENT_SECRET`
