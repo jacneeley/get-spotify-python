@@ -16,8 +16,7 @@ artists = []
 albums = []
 
 for i in df['Album']:
-    i = i.strip('\"')
-    albums.append(i)
+    albums.append(i.strip('\"'))
 
 for i in df['Artist']:
     artists.append(i.lower())
