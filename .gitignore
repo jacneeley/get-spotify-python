@@ -165,6 +165,7 @@ cython_debug/
 #Folders
 top-adds-imgs/
 top-30-imgs/
+*.zip
 
 #imgs
 *.png
