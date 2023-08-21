@@ -12,11 +12,9 @@ def download_imgs(df):
         print("Directory '% s' created" % directory)
     else: 
         print("'% s' exists" % directory)
-    count = 0
     albums = []
     urls = []
     for a,u in zip(df['Album'],df['Album Picture Url']):
-        count += 1
         albums.append(a)
         urls.append(u)
     for album , url in zip(albums,urls):
