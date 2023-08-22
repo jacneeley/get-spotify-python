@@ -163,7 +163,7 @@ cython_debug/
 *.csv
 
 #Folders
-top-adds-imgs/
+top-adds/
 top-30-imgs/
 *.zip
 
