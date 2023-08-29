@@ -35,14 +35,16 @@ def album_search(token, album_id):
 album_data = []
 print("Creating CSV...")
 for album,artist in zip(albums, artists):
-    album=spotify_search(token,album,artist)
-    if album == None:
+    album_id=spotify_search(token,album,artist)
+    
+    if album_id == None:
         album_data.append({"Album":"No Album Found","Artist":"None","Album Picture Url":"None"})
         print("No Album Found...")
     else:
-        album_data.append(album_search(token,album))
-        print(str(album_search(token,album)) + ' added...')
-    top_albums = pd.DataFrame(album_data)
+        album_found = album_search(token, album_id)
+        album_data.append(album_found)
+        print(str(album_found) + ' added...')
+top_albums = pd.DataFrame(album_data)
 
 #change column positions.
 new_cols = ['Artist','Album','Album Picture Url']
