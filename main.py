@@ -37,9 +37,9 @@ for album,artist in zip(albums, artists):
     album_id=spotify_search(token,album,artist)
     
     if album_id == None:
-    album=spotify_search(token,album,artist)
-    print(album)
-    print(" ")
+        album=spotify_search(token,album,artist)
+        print(album)
+        print(" ")
         album_data.append({"Album":"No Album Found","Artist":"None","Album Picture Url":"None"})
         print("No Album Found...")
     else:
