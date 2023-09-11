@@ -19,4 +19,4 @@ for i in df['Album']:
     albums.append(i.replace('"',"").replace("[","").replace("]","").lower())
 
 for i in df['Artist']:
-    artists.append(i.lower())
+    artists.append(i)
