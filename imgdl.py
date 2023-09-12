@@ -37,4 +37,4 @@ def download_imgs(df):
                 if not img:
                     break
                 handle.write(img)
-                print("downloaded...")
+        print("downloaded...")
