@@ -47,4 +47,4 @@ else:
 
 print("Downloading Images...")
 download_imgs(top_albums)
-print("Done.")  
+print("Done.")
