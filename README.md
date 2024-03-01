@@ -1,7 +1,7 @@
 # Album Cover Search Script
 
 ## Purpose:
-To make the process of collecting Album Cover images for our blog's top 30 less tedious<br>
+To make the process of collecting Album Cover images for ktsw blog's top 30 less tedious<br>
 
 ## About:
 This python script reads KTSW's NACC Chart CSVs to collect the Artist and Record (album name).<br>
